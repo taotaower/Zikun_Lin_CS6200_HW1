@@ -1,0 +1,29 @@
+Because we use the BFS to crawl the urls, the more important url will be the url appear earlier,
+
+so the order of the urls in the urls-file follow the url's importance .
+
+1) we set one point for the urls-file of seed 'https://en.wikipedia.org/wiki/Sustainable_energy'
+
+and set the point points to the first url in this file.
+
+Set another point for the urls-file of seed 'https://en.wikipedia.org/wiki/Solar_power.'
+
+and set the point points to the first url in this file.
+
+2) We will everytime pick the url pointed by the point ,in the urls-file of
+
+seed 'https://en.wikipedia.org/wiki/Sustainable_energy' and check if this url has been added to the merge-file,
+
+if so we will not add this url into the merge-file, if not we add it to the merge-file, and move the point to
+
+the next url.
+
+3) We will everytime pick the url pointed by the point ,in the urls-file of
+
+seed 'https://en.wikipedia.org/wiki/Solar_power' and check if this url has been added to the merge-file,
+
+if so we will not add this url into the merge-file, if not we add it to the merge-file, and move the point to
+
+the next url.
+
+4) we repeat 2) and 3) until the merge-file includes 1000 urls or there is no urls in both seed's urls-file

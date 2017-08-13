@@ -1,0 +1,51 @@
+1. The way to implement the BFC
+
+1) Everytime we visit a url, we will add it to crawled list.
+
+2) Find all the needed visiting child-urls in the page of this url, and add the needed visiting child-urls
+
+into a list named 'nextFrontier', this list stores the urls needed to crawl in next depth
+
+3) when we finish crawling all the urls in a shallow layer , we will start crawling next layer of urls
+
+until we have crawled the maximum numbers of urls or reach the final layer.
+
+2. The way to implement the DFC
+
+1) Everytime we visit a url, we will add it to crawled list.
+
+2) Find all the needed visiting child-urls in the page of this url, and add the needed visiting child-urls
+
+into a list named 'nextFrontier', this list stores the urls needed to crawl in next depth
+
+3) We let the leftmost child-url of the url be the first crawled one, and use recursion to let
+
+this leftmost child-url's child url to be crawled next, until we have crawled the maximum numbers of urls
+
+or reach the final layer
+
+4) for every layer we will do this recursion from leftmost to the last node
+
+3. Compare the implementation of BFS and DFC
+
+For DFC we need to use recursion to make sure we traverse every node follow the DFC order,
+
+in this recursion, actually we implemented the 'stack' DataStructure.
+
+BFS we just traverse every layer from shallow layer to deep layer,
+
+in one layer we traverse node from leftmost to the final one ,
+
+actually we implemented the 'queue' DataStructure.
+
+4. Compare the result of BFC and DFC
+
+1) for the top 5 URLs, the BFC all the urls are in one page, and by their appear order in the page
+
+'https://en.wikipedia.org/wiki/Sustainable_energy'
+
+DFC from the 1st to 4th url follow the order of depth of the layer from shallow to deep, because 4th
+
+url reach the final layer, the 5th url in the same layer of 3rd url in the 4th layer
+
+
